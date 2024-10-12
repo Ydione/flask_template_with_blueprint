@@ -1,21 +1,17 @@
-from flask import current_app as app
+# from flask import current_app as app
 from flask_assets import Bundle, Environment
 
 def compile_stylesheet_bundles(assets: Environment) -> Environment:
     main_style_bundle = Bundle(
         'src/less/main.less',
-        filters='less,cssmin',
+        filters='cssmin',
         output='dist/css/main.min.css',
         extra={'rel': 'stylesheet/css'}  
     )
-    print(1)
     assets.register('main_styles', main_style_bundle)
-    print(2)
-
 
     # if app.config['ENVIRONMENT'] == 'development':
     main_style_bundle.build()
-    print(3)
 
     return assets
 

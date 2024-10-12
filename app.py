@@ -10,7 +10,6 @@ from assets import compile_stylesheet_bundles, compile_js_bundles
 # Create all databases here
 db = SQLAlchemy()
 
-
 def create_app():
     """Create Flask application."""
     app = Flask(__name__, instance_relative_config=True, static_folder='static')

@@ -1,3 +1,4 @@
+# This file contains all routes under 'home' blueprint
 from flask import render_template
 from . import home_blueprint
 

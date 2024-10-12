@@ -8,3 +8,9 @@ venv\Scripts\activate
 pip install -r requirements.txt
 flask run --reload
 ```
+
+## Update dependencies (when new package is added)
+
+```
+pip freeze > requirements.txt
+```

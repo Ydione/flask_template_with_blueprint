@@ -5,14 +5,14 @@ from flask_bootstrap import Bootstrap5
 import os
 from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
-from assets import compile_stylesheet_bundles, compile_js_bundles
+from .assets import compile_stylesheet_bundles, compile_js_bundles
 
 # Create all databases here
 db = SQLAlchemy()
 
 def configure_routes(app):
     """Create Flask application."""
-    app.config.from_object("config.Config")
+    app.config.from_object("handlers.config.Config")
     Bootstrap5(app)
     assets = Environment()
     assets.init_app(app)

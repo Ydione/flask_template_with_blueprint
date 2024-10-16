@@ -4,7 +4,7 @@ from flask import send_file
 from flask import render_template
 from . import misc_tools_blueprint
 
-@misc_tools_blueprint.route("/misc_tools", methods=["GET"])
+@misc_tools_blueprint.get("/misc_tools")
 def misc_tools_dashboard():
     return "misc_tools"
 

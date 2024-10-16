@@ -2,6 +2,6 @@
 from flask import render_template
 from . import home_blueprint
 
-@home_blueprint.route("/home", methods=["GET"])
+@home_blueprint.route("/", methods=["GET"])
 def home_dashboard():
     return render_template('home/home.html')
